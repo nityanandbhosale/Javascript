@@ -1,0 +1,43 @@
+#std{
+    color: orange;
+    background-color: aliceblue;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 50px;
+
+}
+
+#std:hover{
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+
+}
+
+#button{
+    color: orange;
+    background-color: white;
+    border: 1px solid orange;
+    
+
+    
+}
+
+.seven li{
+     color: orange;
+     padding: 5px;
+     background-color: aqua;
+     margin: 5px;
+     width: 200px;
+
+
+}
+
+#button:hover{
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+    font-weight: bold;
+}

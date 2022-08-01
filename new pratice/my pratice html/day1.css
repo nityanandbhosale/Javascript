@@ -1,0 +1,24 @@
+h1 {
+    color: red;
+    background-image: -moz-element();
+    width: 150px;
+    height: 100px;
+}
+#tag {
+    color: violet;
+    background-color: aliceblue;
+    width: 50;
+    height: 30;
+}
+#expl {
+    color: orange;
+    background-color: aliceblue;
+    width: 50;
+    height: 30;
+}
+#linfo {
+    color: orangered;
+    background-color: aliceblue;
+    width: 50;
+    height: 30;
+}

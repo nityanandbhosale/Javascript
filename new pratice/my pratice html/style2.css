@@ -1,0 +1,44 @@
+h1{
+    color: blue;
+    background-color: aliceblue;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border: 5px solid blue;
+    cursor: pointer;
+
+}
+h1:hover{
+    color: aliceblue;
+    background-color: blue;
+}
+
+li{
+    color:orangered;
+    background-color:aliceblue;
+    margin: 5px;
+    padding: 5px;
+    font-style:inherit;
+    cursor: pointer;
+
+}
+
+button{
+    color:rgb(232, 79, 148)  ;
+    background-color:azure;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+
+button:hover{
+    color: azure;
+    background-color: rgb(232, 79, 148);
+}
+
+input{
+    color:coral ;
+    background-color: azure;
+    border: 1px solid blueviolet;
+    cursor: pointer;
+}

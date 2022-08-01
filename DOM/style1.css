@@ -1,0 +1,23 @@
+h1 {
+     color: coral;
+     background-color: floralwhite;
+     font-style: italic;
+     width: auto;
+     height: auto;
+}
+p {
+    color:yellowgreen;
+
+}
+ 
+.boys {
+    color: maroon;
+    background-color: aqua;
+    width: 50;
+    height: 50;
+}
+#one {
+    color: darkorange;
+    background-color: aliceblue;
+    font-style: italic;
+}
