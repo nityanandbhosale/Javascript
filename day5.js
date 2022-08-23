@@ -145,11 +145,11 @@ let qq =["sadu","nityanand","rohit","prathmesh","sahil"]
 
 //console.log(qq)
 
-qq.splice(0.,2,"sham","ajay")
+qq.splice(0,2,"sham","ajay")
 console.log(qq)
 
-//qq.splice(3,4,"sushant","shivam")
-//console.log(qq)
+qq.splice(3,4,"sushant","shivam")
+console.log(qq)
 
 //Flat (IN WHICH YOU CAN KNOW THE ANY ELEMENT USING INDEX AND SUBINDEX)
 //multiple dimension arry

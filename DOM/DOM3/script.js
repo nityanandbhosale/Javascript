@@ -23,7 +23,9 @@ for(let i=0; i<liList.length; i++){
 }
 
 buttonA_1.addEventListener('click',function(){
-    if (inputText.value == "") {}
+    if (inputText.value == "") {
+        alert('You cannot add empty string')
+    }
     else {
    let list =inputText.value
    let newList =document.createElement('li') //<li></li>

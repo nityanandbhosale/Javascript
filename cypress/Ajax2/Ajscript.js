@@ -9,158 +9,160 @@
 
 //***************** Example one **********************************/
 
-// function userdata(){
-//     fetch('https://reqres.in/api/users?page=2')
-//     .then(function(response){
-//         // console.log(response)
-//         return response.json()
-//     }).then(function(rs){
-//          return rs
-//      }).then(function(obj){
-//         let id = obj.data[0].id
-//         // console.log(id)
-//         return id
-//     }).then(function(id){
-//         console.log(id)
-//         return id
-//     }).then(function(idno){
-//         fetch(`https://reqres.in/api/users/${idno}`)
-//         .then(function(response){
-//             return response.json()
-            
-//         }).then(function(user){
-//             console.log(user)
-//             let name = user.data.first_name
-//             console.log(name)
-//         })
-//     })
-// }
-
-// userdata()
-
-//so this the promise method  we  write it takes the more line of code
-
-//******************* Another method *******************************/
-
-function getJson(url){
-    return fetch(url)
+function userdata(){
+    fetch('https://reqres.in/api/users?page=2')
     .then(function(response){
-        // (response.json())
+        console.log(response)
         return response.json()
+    }).then(function(rs){
+        console.log(rs)
+        //  return rs
+
      })//.then(function(obj){
-    //     console.log(obj)
+    //     let id = obj.data[0].id
+    //     // console.log(id)
+    //     return id
+    // }).then(function(id){
+    //     console.log(id)
+    //     return id
+    // }).then(function(idno){
+    //     fetch(`https://reqres.in/api/users/${idno}`)
+    //     .then(function(response){
+    //         return response.json()
+            
+    //     }).then(function(user){
+    //         console.log(user)
+    //         let name = user.data.first_name
+    //         console.log(name)
+    //     })
     // })
 }
-getJson('https://reqres.in/api/users?page=2')
 
-//******************************************************* */
+// // userdata()
+
+// //so this the promise method  we  write it takes the more line of code
+
+// //******************* Another method *******************************/
 
 // function getJson(url){
 //     return fetch(url)
 //     .then(function(response){
-//         console.log(response.json())
-//     })
+//         // (response.json())
+//         return response.json()
+//      })//.then(function(obj){
+//     //     console.log(obj)
+//     // })
 // }
 // getJson('https://reqres.in/api/users?page=2')
 
-//************************************************ */
+// //******************************************************* */
 
-let userdata = async function(){
-    let user = await getJson('https://reqres.in/api/users?page=2')
+// // function getJson(url){
+// //     return fetch(url)
+// //     .then(function(response){
+// //         console.log(response.json())
+// //     })
+// // }
+// // getJson('https://reqres.in/api/users?page=2')
 
-    let getid = user.data[0].id
-    // console.log(getid)
-    let info = await getJson(`https://reqres.in/api/users/${getid}`)
-        // console.log(info)
-}
+// //************************************************ */
 
-userdata()
+// let userdata = async function(){
+//     let user = await getJson('https://reqres.in/api/users?page=2')
 
-// here this async method is wait upto response and then execute
-
-//************ Promise.all method /
-
-// let info = async function(U1,U2,U3){
-//     let data =await Promise.all([
-//         // Promise.resolve('hello nityanand'),
-//         // Promise.reject('bye nityanand'),
-//         // Promise.resolve('hello nityanand'),
-
-//         getJson(`https://reqres.in/api/users/${U1}`),
-//         getJson(`https://reqres.in/api/users/${U2}`),
-//         getJson(`https://reqres.in/api/users/${U3}`)
-//     ])
-
-//     return data
+//     let getid = user.data[0].id
+//     // console.log(getid)
+//     let info = await getJson(`https://reqres.in/api/users/${getid}`)
+//         // console.log(info)
 // }
 
-// let cheak = info(1,2,7)
-//  cheak.then(function(user){
-//     console.log(user)
-// })
+// userdata()
 
-//******************* promise.any method ************* */
+// // here this async method is wait upto response and then execute
 
- let infoany = async function(U1,U2,U3){
-    let data =await Promise.any([
-        Promise.resolve('hello nityanand'),
-        Promise.reject('bye nityanand'),
-        Promise.resolve('hello nityanand'),
+// //************ Promise.all method /
 
+// // let info = async function(U1,U2,U3){
+// //     let data =await Promise.all([
+// //         // Promise.resolve('hello nityanand'),
+// //         // Promise.reject('bye nityanand'),
+// //         // Promise.resolve('hello nityanand'),
 
-        //  getJson(`https://reqres.in/api/users/${U1}`),
-        //  getJson(`https://reqres.in/api/users/${U2}`),
-        //  getJson(`https://reqres.in/api/users/${U3}`)
-    ])
+// //         getJson(`https://reqres.in/api/users/${U1}`),
+// //         getJson(`https://reqres.in/api/users/${U2}`),
+// //         getJson(`https://reqres.in/api/users/${U3}`)
+// //     ])
 
-    return data
- }
- let cheak2 = infoany(1,2,7)
-  cheak2.then(function(resp){
-     console.log(resp)
- })
+// //     return data
+// // }
 
-//************* promise.allSettled ****************/
+// // let cheak = info(1,2,7)
+// //  cheak.then(function(user){
+// //     console.log(user)
+// // })
 
-// let infoallset = async function(U1,U2,U3){
-//     let data =await Promise.allSettled([
+// //******************* promise.any method ************* */
+
+//  let infoany = async function(U1,U2,U3){
+//     let data =await Promise.any([
 //         Promise.resolve('hello nityanand'),
 //         Promise.reject('bye nityanand'),
 //         Promise.resolve('hello nityanand'),
 
-//         // getJson(`https://reqres.in/api/users/${U1}`),
-//         // getJson(`https://reqres.in/api/users/${U2}`),
-//         // getJson(`https://reqres.in/api/users/${U3}`)
+
+//         //  getJson(`https://reqres.in/api/users/${U1}`),
+//         //  getJson(`https://reqres.in/api/users/${U2}`),
+//         //  getJson(`https://reqres.in/api/users/${U3}`)
 //     ])
 
 //     return data
-// }
-// let cheak3 = infoallset(1,2,7)
-//  cheak3.then(function(resp){
-//     console.log(resp)
-// })
+//  }
+//  let cheak2 = infoany(1,2,7)
+//   cheak2.then(function(resp){
+//      console.log(resp)
+//  })
 
-//**************************** promise.race method **************/
+// //************* promise.allSettled ****************/
 
-// this method return the those who resolved first
+// // let infoallset = async function(U1,U2,U3){
+// //     let data =await Promise.allSettled([
+// //         Promise.resolve('hello nityanand'),
+// //         Promise.reject('bye nityanand'),
+// //         Promise.resolve('hello nityanand'),
 
-// let inforace = async function(U1,U2,U3){
-//     let data =await Promise.race([
-//         // Promise.resolve('hello nityanand'),
-//         // Promise.reject('bye nityanand'),
-//         // Promise.resolve('hello nityanand'),
+// //         // getJson(`https://reqres.in/api/users/${U1}`),
+// //         // getJson(`https://reqres.in/api/users/${U2}`),
+// //         // getJson(`https://reqres.in/api/users/${U3}`)
+// //     ])
 
-//         getJson(`https://reqres.in/api/users/${U1}`),
-//         getJson(`https://reqres.in/api/users/${U2}`),
-//         getJson(`https://reqres.in/api/users/${U3}`)
-//     ])
+// //     return data
+// // }
+// // let cheak3 = infoallset(1,2,7)
+// //  cheak3.then(function(resp){
+// //     console.log(resp)
+// // })
 
-//     return data
-// }
-// let cheak4 = inforace(1,2,7)
-//  cheak4.then(function(resp){
-//     console.log(resp)
-// })
+// //**************************** promise.race method **************/
+
+// // this method return the those who resolved first
+
+// // let inforace = async function(U1,U2,U3){
+// //     let data =await Promise.race([
+// //         // Promise.resolve('hello nityanand'),
+// //         // Promise.reject('bye nityanand'),
+// //         // Promise.resolve('hello nityanand'),
+
+// //         getJson(`https://reqres.in/api/users/${U1}`),
+// //         getJson(`https://reqres.in/api/users/${U2}`),
+// //         getJson(`https://reqres.in/api/users/${U3}`)
+// //     ])
+
+// //     return data
+// // }
+// // let cheak4 = inforace(1,2,7)
+// //  cheak4.then(function(resp){
+// //     console.log(resp)
+// // })
 
 
 
